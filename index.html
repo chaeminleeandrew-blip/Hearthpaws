@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HearthPaws — Premium comfort for the pets who wait for you</title>
+<meta name="description" content="HearthPaws makes three quiet upgrades for everyday pet care: an orthopedic Haven Bed, the SteamGroom 3-in-1 grooming brush, and the Stillwater cordless stainless fountain. Free US shipping over $50 · 30-day Happy Pet Guarantee.">
+<meta name="theme-color" content="#33452F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2333452F'/%3E%3Cg fill='%23F7F1E6'%3E%3Cellipse cx='16' cy='21' rx='6' ry='4.6'/%3E%3Cellipse cx='9' cy='15' rx='2.6' ry='3.2'/%3E%3Cellipse cx='23' cy='15' rx='2.6' ry='3.2'/%3E%3Cellipse cx='12.5' cy='10' rx='2.3' ry='2.9'/%3E%3Cellipse cx='19.5' cy='10' rx='2.3' ry='2.9'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+  :root{
+    --cream:#FBF7F0;
+    --cream-2:#F5EDE1;
+    --sand:#EDE1CF;
+    --sand-2:#E3D2BA;
+    --ink:#241F1A;
+    --ink-soft:#4A423A;
+    --muted:#7A6E60;
+    --moss:#33452F;
+    --moss-2:#44593E;
+    --clay:#C1703F;
+    --clay-2:#A85B2D;
+    --line:rgba(36,31,26,.12);
+    --white:#fffdf9;
+    --shadow-sm:0 1px 2px rgba(36,31,26,.06),0 6px 18px -12px rgba(36,31,26,.35);
+    --shadow-md:0 2px 4px rgba(36,31,26,.05),0 24px 48px -28px rgba(36,31,26,.5);
+    --radius:20px;
+    --radius-sm:12px;
+    --serif:ui-serif,Georgia,"Times New Roman",Times,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
+    --wrap:1180px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;color:inherit;cursor:pointer}
+  ::selection{background:var(--sand-2);color:var(--ink)}
+  .wrap{width:min(100% - 40px,var(--wrap));margin-inline:auto}
+  .eyebrow{
+    font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+    font-weight:650;color:var(--moss-2);
+    display:flex;align-items:center;gap:.55rem;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:currentColor;opacity:.6}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.015em;line-height:1.1;margin:0}
+  h1{font-size:clamp(2.4rem,5.4vw,4.1rem)}
+  h2{font-size:clamp(1.85rem,3.4vw,2.7rem)}
+  h3{font-size:1.12rem;line-height:1.3}
+  p{margin:0}
+  .lede{color:var(--ink-soft);font-size:clamp(1rem,1.4vw,1.12rem);max-width:52ch}
+
+  /* ---------- announcement ---------- */
+  .announce{
+    background:var(--moss);color:#F1EADD;
+    font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;
+    display:flex;justify-content:center;align-items:center;gap:.6rem;
+    padding:.62rem 1rem;text-align:center;
+  }
+  .announce svg{width:14px;height:14px;flex:none;opacity:.85}
+  .announce span{white-space:nowrap}
+  .announce .dot{width:4px;height:4px;border-radius:50%;background:currentColor;opacity:.45;flex:none}
+  @media (max-width:620px){.announce{font-size:.66rem;letter-spacing:.03em;flex-wrap:wrap;row-gap:.15rem}.announce .dot{display:none}.announce span{white-space:normal}}
+
+  /* ---------- header ---------- */
+  .site-header{
+    position:sticky;top:0;z-index:40;
+    background:rgba(251,247,240,.86);
+    backdrop-filter:blur(14px) saturate(1.15);
+    -webkit-backdrop-filter:blur(14px) saturate(1.15);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s,box-shadow .3s;
+  }
+  .site-header.stuck{border-bottom-color:var(--line);box-shadow:0 8px 24px -22px rgba(36,31,26,.8)}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 0}
+  .brand{display:flex;align-items:center;gap:.6rem;font-family:var(--serif);font-size:1.28rem;letter-spacing:-.01em}
+  .brand-mark{width:34px;height:34px;flex:none;background:var(--moss);border-radius:11px;display:grid;place-items:center}
+  .brand-mark svg{width:20px;height:20px}
+  .brand b{font-weight:600}
+  .nav{display:flex;gap:1.65rem;font-size:.9rem;color:var(--ink-soft)}
+  .nav a{position:relative;padding:.2rem 0}
+  .nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:1px;background:var(--moss);transition:right .3s}
+  .nav a:hover::after{right:0}
+  .header-tools{display:flex;align-items:center;gap:.5rem}
+  .cart-btn{
+    display:flex;align-items:center;gap:.5rem;
+    background:var(--ink);color:#FBF7F0;border:0;border-radius:999px;
+    padding:.62rem .95rem .62rem 1.05rem;font-size:.85rem;font-weight:550;
+    transition:transform .2s,background .2s;
+  }
+  .cart-btn:hover{background:var(--moss);transform:translateY(-1px)}
+  .cart-btn svg{width:17px;height:17px}
+  .cart-count{
+    min-width:20px;height:20px;border-radius:999px;background:var(--clay);
+    display:grid;place-items:center;font-size:.72rem;font-weight:700;padding:0 5px;
+  }
+  .cart-count.pop{animation:pop .45s ease}
+  @keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.45)}100%{transform:scale(1)}}
+  @media (max-width:900px){.nav{display:none}}
+  @media (max-width:360px){.cart-btn span.label{display:none}}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;overflow:hidden;padding:clamp(2.2rem,5vw,4.2rem) 0 clamp(2.6rem,5vw,4.6rem)}
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(60% 55% at 82% 18%,rgba(224,164,107,.16),transparent 70%),
+      radial-gradient(48% 48% at 8% 88%,rgba(51,69,47,.08),transparent 70%);
+    pointer-events:none;
+  }
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(2rem,4vw,4rem);align-items:center}
+  .hero-copy{display:flex;flex-direction:column;gap:1.35rem;max-width:560px}
+  .hero-copy h1 em{font-style:italic;color:var(--moss)}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:.35rem}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+    border-radius:999px;padding:.92rem 1.55rem;font-size:.92rem;font-weight:600;
+    border:1px solid transparent;transition:transform .2s,box-shadow .2s,background .2s,color .2s;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--moss);color:#FBF7F0;box-shadow:0 10px 24px -14px rgba(51,69,47,.9)}
+  .btn-primary:hover{background:#293A25;transform:translateY(-2px);box-shadow:0 16px 30px -16px rgba(51,69,47,.95)}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+  .btn-ghost:hover{background:var(--white);border-color:rgba(36,31,26,.22);transform:translateY(-2px)}
+  .btn svg{width:16px;height:16px}
+  .hero-trust{display:flex;flex-wrap:wrap;gap:.4rem 1.3rem;margin-top:.6rem;font-size:.8rem;color:var(--muted)}
+  .hero-trust li{display:flex;align-items:center;gap:.4rem;list-style:none}
+  .hero-trust svg{width:14px;height:14px;color:var(--moss-2);flex:none}
+  .hero-trust ul{display:contents}
+  ul.plain{list-style:none;margin:0;padding:0}
+
+  .hero-visual{position:relative}
+  .hero-art{
+    width:100%;height:auto;border-radius:220px 220px 24px 24px;
+    background:linear-gradient(180deg,#F2E6D4,#E9D8C0);
+    box-shadow:0 40px 60px -46px rgba(36,31,26,.55);
+  }
+  .hero-badge{
+    position:absolute;background:var(--white);border:1px solid var(--line);
+    border-radius:16px;padding:.7rem .9rem;box-shadow:var(--shadow-md);
+    display:flex;align-items:center;gap:.6rem;font-size:.76rem;line-height:1.25;
+  }
+  .hero-badge b{display:block;font-size:.84rem;font-weight:650}
+  .hero-badge span{color:var(--muted)}
+  .hero-badge .ico{width:30px;height:30px;border-radius:9px;background:var(--cream-2);display:grid;place-items:center;flex:none}
+  .hero-badge .ico svg{width:16px;height:16px;color:var(--moss-2)}
+  .badge-a{bottom:7%;left:-4%}
+  .badge-b{top:9%;right:-3%}
+  @media (max-width:920px){
+    .hero-grid{grid-template-columns:1fr;gap:2.4rem}
+    .hero-copy{max-width:none;order:1}
+    .hero-visual{order:2;max-width:440px;margin-inline:auto;width:100%}
+    .badge-a{left:-2%;bottom:4%}
+    .badge-b{right:-2%;top:6%}
+  }
+
+  /* ---------- trust strip ---------- */
+  .strip{border-block:1px solid var(--line);background:var(--cream-2)}
+  .strip-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding:1.15rem 0}
+  .strip-item{display:flex;align-items:center;gap:.65rem;font-size:.82rem;color:var(--ink-soft);line-height:1.3}
+  .strip-item svg{width:19px;height:19px;color:var(--moss-2);flex:none}
+  .strip-item b{display:block;font-weight:650;color:var(--ink);font-size:.83rem}
+  @media (max-width:760px){.strip-inner{grid-template-columns:repeat(2,1fr);gap:.9rem}}
+
+  /* ---------- section furniture ---------- */
+  section{scroll-margin-top:80px}
+  .section{padding:clamp(3rem,6vw,5.2rem) 0}
+  .section-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.2rem;margin-bottom:2.2rem}
+  .section-head .lede{max-width:46ch}
+  .section-head > div{display:flex;flex-direction:column;gap:.7rem}
+
+  /* ---------- products ---------- */
+  .shop{background:var(--cream)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,1.8vw,1.5rem)}
+  @media (max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:640px){.grid{grid-template-columns:1fr}}
+  .card{
+    position:relative;display:flex;flex-direction:column;
+    background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;box-shadow:var(--shadow-sm);
+    transition:transform .35s cubic-bezier(.2,.7,.3,1),box-shadow .35s;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+  .card-media{position:relative;background:linear-gradient(165deg,#F4EADC,#EADCC8);aspect-ratio:4/3;display:grid;place-items:center;padding:1rem}
+  .card-media svg{width:100%;height:100%}
+  .badge{
+    position:absolute;top:.85rem;left:.85rem;z-index:2;
+    background:var(--white);border-radius:999px;padding:.32rem .65rem;
+    font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--moss);
+    box-shadow:0 2px 8px rgba(36,31,26,.1);
+  }
+  .card-body{display:flex;flex-direction:column;gap:.7rem;padding:1.15rem 1.2rem 1.3rem;flex:1}
+  .rating{display:flex;align-items:center;gap:.35rem;font-size:.74rem;color:var(--muted)}
+  .stars{display:flex;gap:1px;color:var(--clay)}
+  .stars svg{width:12px;height:12px}
+  .card-title{display:flex;justify-content:space-between;align-items:baseline;gap:.6rem}
+  .card-title h3{font-size:1.16rem}
+  .card-sub{font-size:.82rem;color:var(--muted);margin-top:.2rem}
+  .price-row{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap;margin-top:.1rem}
+  .price{font-family:var(--serif);font-size:1.42rem;font-weight:500;letter-spacing:-.01em}
+  .compare{font-size:.82rem;color:var(--muted);text-decoration:line-through}
+  .save{font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--clay-2);background:rgba(193,112,63,.1);padding:.16rem .45rem;border-radius:6px}
+  .card p.desc{font-size:.86rem;color:var(--ink-soft);line-height:1.55}
+  .variant{display:flex;flex-direction:column;gap:.3rem;font-size:.74rem;color:var(--muted);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+  .select-wrap{position:relative}
+  .select-wrap::after{
+    content:"";position:absolute;right:.85rem;top:50%;width:7px;height:7px;
+    border-right:1.5px solid var(--ink-soft);border-bottom:1.5px solid var(--ink-soft);
+    transform:translateY(-70%) rotate(45deg);pointer-events:none;
+  }
+  select{
+    appearance:none;-webkit-appearance:none;width:100%;
+    font-family:var(--sans);font-size:.85rem;font-weight:500;color:var(--ink);
+    background:var(--cream);border:1px solid var(--line);border-radius:10px;
+    padding:.6rem 2rem .6rem .75rem;letter-spacing:0;text-transform:none;
+  }
+  select:focus-visible{outline:2px solid var(--moss);outline-offset:2px}
+  .card-actions{margin-top:auto;padding-top:.35rem;display:flex;flex-direction:column;gap:.45rem}
+  .btn-add{
+    width:100%;background:var(--ink);color:#FBF7F0;border:0;border-radius:11px;
+    padding:.82rem 1rem;font-size:.88rem;font-weight:600;
+    display:flex;align-items:center;justify-content:center;gap:.5rem;
+    transition:background .2s,transform .15s;
+  }
+  .btn-add:hover{background:var(--moss)}
+  .btn-add:active{transform:scale(.985)}
+  .btn-add svg{width:16px;height:16px}
+  .micro{font-size:.71rem;color:var(--muted);display:flex;align-items:center;gap:.3rem;justify-content:center}
+  .micro svg{width:12px;height:12px}
+
+  /* ---------- add ons ---------- */
+  .addons{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:1.5rem 0}
+  .addons-inner{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.6rem;justify-content:space-between}
+  .addons-lead{display:flex;flex-direction:column;gap:.15rem;min-width:210px}
+  .addons-lead b{font-family:var(--serif);font-size:1.1rem;font-weight:500}
+  .addons-lead span{font-size:.8rem;color:var(--muted)}
+  .addon-row{display:flex;flex-wrap:wrap;gap:.7rem}
+  .addon{
+    display:flex;align-items:center;gap:.7rem;background:var(--white);
+    border:1px solid var(--line);border-radius:999px;padding:.4rem .45rem .4rem .4rem;
+    font-size:.82rem;transition:border-color .2s,transform .2s;
+  }
+  .addon:hover{border-color:rgba(36,31,26,.25);transform:translateY(-1px)}
+  .addon .ico{width:32px;height:32px;border-radius:50%;background:var(--cream-2);display:grid;place-items:center;flex:none}
+  .addon .ico svg{width:18px;height:18px;color:var(--moss-2)}
+  .addon .txt{line-height:1.2}
+  .addon .txt b{display:block;font-weight:600;font-size:.82rem}
+  .addon .txt span{color:var(--muted);font-size:.76rem}
+  .addon button{
+    border:0;background:var(--moss);color:#FBF7F0;border-radius:999px;
+    width:30px;height:30px;display:grid;place-items:center;flex:none;transition:background .2s;
+  }
+  .addon button:hover{background:#293A25}
+  .addon button svg{width:14px;height:14px}
+
+  /* ---------- promise ---------- */
+  .promise{background:var(--moss);color:#F3EDE2;position:relative;overflow:hidden}
+  .promise::after{
+    content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;
+    background:radial-gradient(circle,rgba(224,164,107,.18),transparent 65%);
+  }
+  .promise .eyebrow{color:#D9C7A8}
+  .promise h2{color:#FBF7F0}
+  .promise .lede{color:rgba(243,237,226,.75)}
+  .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.4rem;position:relative}
+  @media (max-width:900px){.pillars{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.pillars{grid-template-columns:1fr}}
+  .pillar{border:1px solid rgba(243,237,226,.16);border-radius:16px;padding:1.25rem;background:rgba(255,255,255,.03)}
+  .pillar .ico{width:38px;height:38px;border-radius:11px;background:rgba(243,237,226,.1);display:grid;place-items:center;margin-bottom:.85rem}
+  .pillar .ico svg{width:20px;height:20px;color:#E9D9BF}
+  .pillar h3{font-size:1.02rem;color:#FBF7F0;margin-bottom:.35rem}
+  .pillar p{font-size:.83rem;color:rgba(243,237,226,.72);line-height:1.55}
+
+  /* ---------- reviews ---------- */
+  .reviews{background:var(--cream)}
+  .note{
+    display:inline-flex;align-items:center;gap:.45rem;
+    font-size:.72rem;letter-spacing:.04em;color:var(--clay-2);
+    background:rgba(193,112,63,.09);border:1px dashed rgba(193,112,63,.4);
+    border-radius:8px;padding:.35rem .6rem;font-weight:600;
+  }
+  .note svg{width:13px;height:13px}
+  .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  @media (max-width:900px){.review-grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:620px){.review-grid{grid-template-columns:1fr}}
+  .review{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:1.35rem;display:flex;flex-direction:column;gap:.7rem}
+  .review .stars svg{width:13px;height:13px}
+  .review blockquote{margin:0;font-size:.9rem;color:var(--ink-soft);line-height:1.6}
+  .review figcaption{display:flex;align-items:center;gap:.6rem;font-size:.78rem;color:var(--muted);margin-top:auto}
+  .avatar{width:30px;height:30px;border-radius:50%;background:var(--sand);display:grid;place-items:center;font-size:.72rem;font-weight:700;color:var(--moss);flex:none}
+  .review figcaption b{color:var(--ink);font-weight:650;font-size:.8rem}
+  .rating-summary{display:flex;align-items:center;gap:.8rem;font-size:.8rem;color:var(--muted)}
+  .rating-summary .big{font-family:var(--serif);font-size:1.9rem;color:var(--ink);line-height:1}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--cream-2);border-top:1px solid var(--line)}
+  .faq-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(1.5rem,4vw,4rem);align-items:start}
+  @media (max-width:860px){.faq-grid{grid-template-columns:1fr}}
+  .faq-list{display:flex;flex-direction:column}
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-item:first-child{border-top:1px solid var(--line)}
+  .faq-q{
+    width:100%;background:none;border:0;text-align:left;
+    display:flex;align-items:center;justify-content:space-between;gap:1rem;
+    padding:1.05rem 0;font-size:.95rem;font-weight:600;color:var(--ink);
+  }
+  .faq-q:hover{color:var(--moss)}
+  .faq-q .sign{position:relative;width:18px;height:18px;flex:none}
+  .faq-q .sign::before,.faq-q .sign::after{
+    content:"";position:absolute;inset:50% 0 auto 0;height:1.5px;background:currentColor;
+    transition:transform .3s;
+  }
+  .faq-q .sign::after{transform:rotate(90deg)}
+  .faq-item.open .faq-q .sign::after{transform:rotate(0)}
+  .faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .32s ease}
+  .faq-item.open .faq-a{grid-template-rows:1fr}
+  .faq-a > div{overflow:hidden}
+  .faq-a p{font-size:.88rem;color:var(--ink-soft);padding:0 2.2rem 1.15rem 0;line-height:1.65}
+  @media (prefers-reduced-motion:reduce){.faq-a{transition:none}}
+  .faq-aside{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem;display:flex;flex-direction:column;gap:.9rem;box-shadow:var(--shadow-sm)}
+  .faq-aside h3{font-size:1.2rem}
+  .faq-aside p{font-size:.87rem;color:var(--ink-soft)}
+  .faq-aside .mail{
+    display:inline-flex;align-items:center;gap:.45rem;font-size:.86rem;font-weight:600;
+    color:var(--moss);border-bottom:1px solid rgba(51,69,47,.35);padding-bottom:2px;align-self:flex-start;
+  }
+  .faq-aside .mail svg{width:14px;height:14px}
+
+  /* ---------- newsletter ---------- */
+  .signup{background:var(--cream)}
+  .signup-inner{
+    background:linear-gradient(140deg,#F1E4D2,#E7D6BE);
+    border-radius:26px;padding:clamp(1.7rem,4vw,3rem);
+    display:grid;grid-template-columns:1.1fr .9fr;gap:1.6rem;align-items:center;
+    border:1px solid rgba(36,31,26,.06);
+  }
+  @media (max-width:760px){.signup-inner{grid-template-columns:1fr}}
+  .signup h2{font-size:clamp(1.6rem,2.8vw,2.2rem)}
+  .signup p{font-size:.92rem;color:var(--ink-soft);margin-top:.6rem;max-width:42ch}
+  .signup form{display:flex;gap:.5rem;flex-wrap:wrap}
+  .signup input{
+    flex:1 1 200px;min-width:0;border:1px solid rgba(36,31,26,.16);border-radius:11px;
+    background:var(--white);padding:.85rem 1rem;font-family:var(--sans);font-size:.9rem;
+  }
+  .signup input:focus{outline:2px solid var(--moss);outline-offset:1px}
+  .signup .btn-primary{background:var(--ink)}
+  .signup .btn-primary:hover{background:var(--moss)}
+  .signup small{display:block;font-size:.72rem;color:var(--muted);margin-top:.6rem}
+
+  /* ---------- footer ---------- */
+  .site-footer{background:#201C17;color:rgba(247,241,230,.72);padding:clamp(2.4rem,5vw,3.6rem) 0 1.6rem}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem}
+  @media (max-width:820px){.footer-grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:480px){.footer-grid{grid-template-columns:1fr}}
+  .site-footer .brand{color:#F7F1E6;margin-bottom:.85rem}
+  .site-footer .brand-mark{background:rgba(247,241,230,.12)}
+  .site-footer p{font-size:.82rem;line-height:1.65;max-width:34ch}
+  .footer-col h4{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(247,241,230,.55);margin:0 0 .9rem;font-weight:700}
+  .footer-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.55rem;font-size:.85rem}
+  .footer-col a:hover{color:#F7F1E6}
+  .footer-bottom{
+    border-top:1px solid rgba(247,241,230,.12);margin-top:2.4rem;padding-top:1.2rem;
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:.8rem;font-size:.74rem;color:rgba(247,241,230,.45);
+  }
+  .footer-bottom .demo{color:rgba(247,241,230,.55)}
+  .pay{display:flex;gap:.4rem;align-items:center}
+  .pay span{border:1px solid rgba(247,241,230,.2);border-radius:5px;padding:.1rem .35rem;font-size:.62rem;letter-spacing:.06em}
+
+  /* ---------- cart drawer ---------- */
+  .scrim{
+    position:fixed;inset:0;background:rgba(24,20,16,.45);
+    opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s;z-index:60;
+    backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);
+  }
+  .scrim.open{opacity:1;visibility:visible}
+  .drawer{
+    position:fixed;top:0;right:0;height:100%;width:min(420px,100%);
+    background:var(--cream);z-index:70;display:flex;flex-direction:column;
+    transform:translateX(102%);visibility:hidden;
+    transition:transform .42s cubic-bezier(.32,.72,.24,1),visibility 0s linear .42s;
+    box-shadow:-30px 0 60px -40px rgba(0,0,0,.6);
+  }
+  .drawer.open{transform:translateX(0);visibility:visible;transition:transform .42s cubic-bezier(.32,.72,.24,1),visibility 0s}
+  .drawer-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.25rem;border-bottom:1px solid var(--line)}
+  .drawer-head h2{font-size:1.18rem;display:flex;align-items:center;gap:.5rem}
+  .drawer-head .count-pill{font-family:var(--sans);font-size:.7rem;font-weight:700;background:var(--sand);color:var(--moss);border-radius:999px;padding:.1rem .5rem}
+  .icon-btn{background:none;border:0;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;transition:background .2s}
+  .icon-btn:hover{background:rgba(36,31,26,.06)}
+  .icon-btn svg{width:18px;height:18px}
+  .ship-meter{padding:1rem 1.25rem;border-bottom:1px solid var(--line);background:var(--cream-2)}
+  .ship-meter p{font-size:.78rem;color:var(--ink-soft);margin-bottom:.5rem;display:flex;align-items:center;gap:.35rem}
+  .ship-meter p svg{width:14px;height:14px;color:var(--moss-2);flex:none}
+  .meter{height:6px;border-radius:999px;background:rgba(36,31,26,.1);overflow:hidden}
+  .meter i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--moss-2),var(--moss));transition:width .45s ease}
+  .drawer-body{flex:1;overflow-y:auto;padding:.4rem 1.25rem}
+  .cart-empty{display:flex;flex-direction:column;align-items:center;gap:.8rem;text-align:center;padding:3.2rem 1rem}
+  .cart-empty .art{width:90px;height:90px;color:var(--sand-2)}
+  .cart-empty h3{font-family:var(--serif);font-size:1.1rem;font-weight:500}
+  .cart-empty p{font-size:.83rem;color:var(--muted);max-width:26ch}
+  .line{display:grid;grid-template-columns:66px 1fr auto;gap:.85rem;padding:1rem 0;border-bottom:1px solid var(--line);align-items:start}
+  .line-thumb{width:66px;height:66px;border-radius:12px;background:linear-gradient(160deg,#F4EADC,#EADCC8);display:grid;place-items:center;overflow:hidden}
+  .line-thumb svg{width:100%;height:100%}
+  .line-info{display:flex;flex-direction:column;gap:.15rem;min-width:0}
+  .line-info b{font-size:.87rem;font-weight:600;line-height:1.3}
+  .line-info .var{font-size:.74rem;color:var(--muted)}
+  .qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;margin-top:.5rem;width:max-content;background:var(--white)}
+  .qty button{width:26px;height:26px;border:0;background:none;display:grid;place-items:center;border-radius:50%;color:var(--ink-soft)}
+  .qty button:hover{background:var(--cream-2);color:var(--ink)}
+  .qty button svg{width:11px;height:11px}
+  .qty span{min-width:22px;text-align:center;font-size:.8rem;font-weight:600;font-variant-numeric:tabular-nums}
+  .line-right{display:flex;flex-direction:column;align-items:flex-end;gap:.4rem}
+  .line-right .amt{font-size:.87rem;font-weight:600;font-variant-numeric:tabular-nums}
+  .line-right .rm{background:none;border:0;font-size:.72rem;color:var(--muted);text-decoration:underline;text-underline-offset:2px;padding:0}
+  .line-right .rm:hover{color:var(--clay-2)}
+  .drawer-foot{padding:1.1rem 1.25rem 1.3rem;border-top:1px solid var(--line);background:var(--white)}
+  .totals{display:flex;flex-direction:column;gap:.4rem;margin-bottom:.9rem;font-size:.85rem}
+  .totals .row{display:flex;justify-content:space-between;color:var(--ink-soft)}
+  .totals .row.grand{font-size:1.05rem;color:var(--ink);font-weight:650;padding-top:.5rem;border-top:1px solid var(--line);margin-top:.2rem;font-variant-numeric:tabular-nums}
+  .checkout{width:100%;background:var(--moss);color:#FBF7F0;border:0;border-radius:12px;padding:1rem;font-size:.95rem;font-weight:650;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:background .2s,transform .15s}
+  .checkout:hover{background:#293A25}
+  .checkout:active{transform:scale(.99)}
+  .checkout svg{width:16px;height:16px}
+  .foot-note{display:flex;align-items:center;justify-content:center;gap:.35rem;font-size:.72rem;color:var(--muted);margin-top:.7rem}
+  .foot-note svg{width:12px;height:12px}
+  .foot-note.warn{color:var(--clay-2)}
+  .foot-note.warn svg{color:var(--clay-2)}
+
+  /* ---------- toast ---------- */
+  .toast-host{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);z-index:90;display:flex;flex-direction:column;gap:.5rem;align-items:center;pointer-events:none;width:max-content;max-width:calc(100% - 32px)}
+  .toast{
+    background:var(--ink);color:#FBF7F0;border-radius:999px;padding:.7rem 1.1rem;
+    font-size:.83rem;display:flex;align-items:center;gap:.5rem;
+    box-shadow:0 18px 30px -18px rgba(0,0,0,.7);
+    animation:toastIn .35s ease both;max-width:100%;
+  }
+  .toast svg{width:15px;height:15px;color:#B9D3A8;flex:none}
+  .toast.out{animation:toastOut .3s ease both}
+  @keyframes toastIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes toastOut{to{opacity:0;transform:translateY(10px)}}
+
+  /* ---------- reveal ---------- */
+  .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+  .js .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    .js .reveal{opacity:1;transform:none;transition:none}
+    .card:hover{transform:none}
+  }
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  :focus-visible{outline:2px solid var(--moss);outline-offset:3px}
+</style>
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+<!-- ============ announcement ============ -->
+<div class="announce">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg>
+  <span>Free US shipping on orders $50+</span>
+  <i class="dot" aria-hidden="true"></i>
+  <span>30-day Happy Pet Guarantee</span>
+  <i class="dot" aria-hidden="true"></i>
+  <span>Dispatched from US warehouses</span>
+</div>
+
+<!-- ============ header ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="HearthPaws home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="#F7F1E6"><ellipse cx="16" cy="21" rx="6" ry="4.6"/><ellipse cx="9" cy="15" rx="2.6" ry="3.2"/><ellipse cx="23" cy="15" rx="2.6" ry="3.2"/><ellipse cx="12.5" cy="10" rx="2.3" ry="2.9"/><ellipse cx="19.5" cy="10" rx="2.3" ry="2.9"/></svg>
+      </span>
+      <span><b>Hearth</b>Paws</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#shop">Shop</a>
+      <a href="#promise">Why HearthPaws</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-tools">
+      <button class="cart-btn" id="cartOpen" aria-haspopup="dialog" aria-controls="cartDrawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M6 8h12l-1.2 11.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6.8a3 3 0 0 1 6 0V8"/></svg>
+        <span class="label">Bag</span>
+        <span class="cart-count" id="cartCount" aria-live="polite" aria-label="0 items in bag">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ hero ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Premium comfort, quietly made</p>
+        <h1>A softer landing for the pets who <em>wait for you</em>.</h1>
+        <p class="lede">Three considered upgrades for everyday care — orthopedic rest, calmer grooming, and fresher water. Built for the small rituals that make a house feel like home.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#shop">
+            Shop the collection
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#promise">How we choose</a>
+        </div>
+        <ul class="hero-trust plain">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12.5l5 5L20 6"/></svg>Free US shipping $50+</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12.5l5 5L20 6"/></svg>3–7 day delivery</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12.5l5 5L20 6"/></svg>30-day guarantee</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <svg class="hero-art" viewBox="0 0 520 560" role="img" aria-label="Illustration of a dog asleep on a bolstered orthopedic bed beside a houseplant">
+          <defs>
+            <linearGradient id="archGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#F6EADA"/><stop offset="1" stop-color="#E6D2B6"/>
+            </linearGradient>
+            <linearGradient id="bedRim" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#C09873"/><stop offset="1" stop-color="#A87C55"/>
+            </linearGradient>
+          </defs>
+          <path d="M52 540V252C52 137 145 44 260 44s208 93 208 208v288Z" fill="url(#archGrad)"/>
+          <circle cx="384" cy="148" r="44" fill="#E3A46A" opacity=".4"/>
+          <circle cx="384" cy="148" r="65" fill="none" stroke="#E3A46A" stroke-width="1" opacity=".28"/>
+
+          <!-- plant -->
+          <g transform="translate(-20 -30)">
+            <path d="M96 474c2-40 10-70 16-92" stroke="#5E7550" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M112 392c-18-4-30-20-30-38 18 2 30 16 30 38Z" fill="#6B8460"/>
+            <path d="M112 392c16-8 24-26 20-44-16 8-24 24-20 44Z" fill="#7C9470"/>
+            <path d="M104 438c-20-2-34-16-36-34 20 0 34 14 36 34Z" fill="#6B8460"/>
+            <ellipse cx="99" cy="514" rx="34" ry="7" fill="#C9AE8C" opacity=".35"/>
+            <path d="M72 464h54l-7 42a9 9 0 0 1-9 8h-22a9 9 0 0 1-9-8Z" fill="#B9895F"/>
+            <path d="M72 464h54v8H72Z" fill="#A87B52"/>
+          </g>
+
+          <ellipse cx="266" cy="514" rx="168" ry="20" fill="#C9AE8C" opacity=".3"/>
+
+          <!-- bed -->
+          <path d="M109 448c0-19 15-34 34-34h240c19 0 34 15 34 34v33c0 15-12 27-27 27H136c-15 0-27-12-27-27Z" fill="url(#bedRim)"/>
+          <ellipse cx="263" cy="446" rx="154" ry="30" fill="#DBBD97"/>
+          <ellipse cx="263" cy="443" rx="126" ry="21" fill="#EFE2CE"/>
+          <path d="M109 448v33c0 15 12 27 27 27h254c15 0 27-12 27-27v-33c-17 13-50 19-154 19s-137-6-154-19Z" fill="#AC8057"/>
+
+          <!-- dog -->
+          <g transform="translate(43 230) scale(1.1)">
+            <path d="M132 198c0-30 26-50 58-46 26 4 44 20 60 20 6 0 10 4 10 10 0 10-12 16-28 16H132Z" fill="#CE9060"/>
+            <path d="M252 190c10 2 18 0 22-6" stroke="#B87C4C" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <circle cx="150" cy="170" r="30" fill="#D59A67"/>
+            <path d="M170 148c14-4 24 6 20 18-4 10-12 16-22 16 6-10 8-22 2-34Z" fill="#A96F42"/>
+            <ellipse cx="128" cy="180" rx="22" ry="15" fill="#E8BB8E"/>
+            <ellipse cx="118" cy="177" rx="5.5" ry="4" fill="#3A2A20"/>
+            <path d="M136 187c6 3 12 3 16-1" stroke="#8C5C36" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M136 163c4-3 9-3 13 0M154 163c4-3 9-3 13 0" stroke="#7B4E2C" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          </g>
+        </svg>
+
+        <div class="hero-badge badge-a">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6-5.3-3-5.3 3 1.1-6L3.4 9.4l6-.8Z"/></svg></span>
+          <span><b>4.8 / 5</b><span>Sample review score</span></span>
+        </div>
+        <div class="hero-badge badge-b">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12.5l5 5L20 6"/></svg></span>
+          <span><b>Ships in 1–3 days</b><span>From US warehouses</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ trust strip ============ -->
+  <div class="strip">
+    <div class="wrap strip-inner">
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.6-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.4-9 9-9 9Z"/></svg>
+        <span><b>Pet-first materials</b>Stainless steel, washable covers</span>
+      </div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg>
+        <span><b>US warehouse dispatch</b>1–3 business days</span>
+      </div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6Z"/><path d="M9 12l2 2 4-4"/></svg>
+        <span><b>30-day guarantee</b>Happy pet, or your money back</span>
+      </div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h16v11H9l-5 4Z"/><path d="M8 9h8M8 12h5"/></svg>
+        <span><b>Real replies</b>Answered within 1 business day</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ shop ============ -->
+  <section class="section shop" id="shop">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">The collection</p>
+          <h2>Three pieces. Every day, well used.</h2>
+          <p class="lede">We keep the range small on purpose: only pieces that solve a real, repeatable problem — and that we would put in our own homes.</p>
+        </div>
+      </div>
+
+      <div class="grid" id="productGrid">
+        <!-- The Haven Bed -->
+        <article class="card reveal" data-product="bed">
+          <div class="card-media">
+            <span class="badge">Best seller</span>
+            <svg viewBox="0 0 400 300" role="img" aria-label="Illustration of the Haven orthopedic bed with a sleeping dog">
+              <defs>
+                <linearGradient id="bedRimCard" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C09873"/><stop offset="1" stop-color="#A87C55"/></linearGradient>
+              </defs>
+              <rect width="400" height="300" fill="#F4E9D9"/>
+              <circle cx="328" cy="74" r="36" fill="#E4A76F" opacity=".36"/>
+              <ellipse cx="200" cy="228" rx="148" ry="28" fill="#C9AE8C" opacity=".28"/>
+              <path d="M58 200c0-24 20-44 44-44h196c24 0 44 20 44 44v18c0 14-11 24-25 24H83c-14 0-25-10-25-24Z" fill="url(#bedRimCard)"/>
+              <ellipse cx="200" cy="200" rx="142" ry="36" fill="#DBBD97"/>
+              <ellipse cx="200" cy="198" rx="114" ry="26" fill="#EFE2CE"/>
+              <path d="M58 200v18c0 14 11 24 25 24h234c14 0 25-10 25-24v-18c-16 12-46 18-142 18s-126-6-142-18Z" fill="#AC8057"/>
+
+              <path d="M132 198c0-30 26-50 58-46 26 4 44 20 60 20 6 0 10 4 10 10 0 10-12 16-28 16H132Z" fill="#CE9060"/>
+              <path d="M252 190c10 2 18 0 22-6" stroke="#B87C4C" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <circle cx="150" cy="170" r="30" fill="#D59A67"/>
+              <path d="M170 148c14-4 24 6 20 18-4 10-12 16-22 16 6-10 8-22 2-34Z" fill="#A96F42"/>
+              <ellipse cx="128" cy="180" rx="22" ry="15" fill="#E8BB8E"/>
+              <ellipse cx="118" cy="177" rx="5.5" ry="4" fill="#3A2A20"/>
+              <path d="M136 187c6 3 12 3 16-1" stroke="#8C5C36" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M136 163c4-3 9-3 13 0M154 163c4-3 9-3 13 0" stroke="#7B4E2C" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+
+              <path d="M320 148l2.6 7 7 2.6-7 2.6-2.6 7-2.6-7-7-2.6 7-2.6Z" fill="#C1703F" opacity=".4"/>
+              <path d="M74 120l2 5.4 5.4 2-5.4 2-2 5.4-2-5.4-5.4-2 5.4-2Z" fill="#33452F" opacity=".28"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <div class="rating"><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg></span> <span>4.8 · sample reviews</span></div>
+            <div>
+              <h3>The Haven Bed</h3>
+              <p class="card-sub">Orthopedic support bed · washable cover</p>
+            </div>
+            <div class="price-row">
+              <span class="price" data-price>From $89</span>
+              <span class="compare" data-compare>$119</span>
+              <span class="save" data-save>Save $30</span>
+            </div>
+            <p class="desc">Four inches of high-density support foam under a sherpa cover that unzips for the wash. A low bolster gives older joints something to lean on — no climbing, no cold floors.</p>
+            <div class="variant">
+              <label for="var-bed">Size</label>
+              <div class="select-wrap"><select id="var-bed" data-variant="bed">
+                <option value="m">Medium · 28 × 22 in</option>
+                <option value="l">Large · 36 × 27 in</option>
+                <option value="xl">X-Large · 44 × 32 in</option>
+              </select></div>
+            </div>
+            <div class="card-actions">
+              <button class="btn-add" data-add="bed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 8h12l-1.2 11.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6.8a3 3 0 0 1 6 0V8"/></svg>
+                Add to bag
+              </button>
+              <span class="micro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12.5l5 5L20 6"/></svg>Free US shipping · 30-day guarantee</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- SteamGroom -->
+        <article class="card reveal" data-product="groom">
+          <div class="card-media">
+            <span class="badge">Shedding season pick</span>
+            <svg viewBox="0 0 400 300" role="img" aria-label="Illustration of the SteamGroom 3-in-1 grooming brush releasing a fine mist">
+              <rect width="400" height="300" fill="#F2EEE4"/>
+              <circle cx="200" cy="158" r="94" fill="#E9DDC9"/>
+              <circle cx="200" cy="158" r="94" fill="none" stroke="#D8C7AE" stroke-width="1.2"/>
+              <g fill="#8FA487" opacity=".5">
+                <circle cx="272" cy="82" r="8"/><circle cx="292" cy="66" r="5"/><circle cx="300" cy="96" r="3.5"/><circle cx="262" cy="110" r="4"/>
+              </g>
+              <g stroke="#8FA487" stroke-width="2" stroke-linecap="round" opacity=".3">
+                <path d="M248 100c8-4 14-10 18-18"/><path d="M256 124c10-6 18-14 22-24"/>
+              </g>
+              <g transform="rotate(-9 200 160)">
+                <rect x="150" y="96" width="100" height="122" rx="34" fill="#FBF8F1" stroke="#D3C6B2" stroke-width="1.6"/>
+                <rect x="160" y="176" width="80" height="30" rx="14" fill="#33452F"/>
+                <circle cx="200" cy="191" r="5.5" fill="#E9D9BF"/>
+                <rect x="144" y="58" width="112" height="52" rx="20" fill="#EFE6D6" stroke="#D3C6B2" stroke-width="1.6"/>
+                <g stroke="#B9A88F" stroke-width="3" stroke-linecap="round">
+                  <path d="M160 72v22M172 70v26M184 68v28M196 68v28M208 68v28M220 70v26M232 72v22"/>
+                </g>
+                <circle cx="200" cy="84" r="4" fill="#8FA487" opacity=".8"/>
+              </g>
+              <g stroke="#C9A57C" stroke-width="2" fill="none" stroke-linecap="round" opacity=".65">
+                <path d="M262 196c10-6 22-4 28 4"/><path d="M118 204c-6-6-6-14 0-18"/>
+              </g>
+              <path d="M96 96l2.6 7 7 2.6-7 2.6-2.6 7-2.6-7-7-2.6 7-2.6Z" fill="#33452F" opacity=".26"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <div class="rating"><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg></span> <span>4.7 · sample reviews</span></div>
+            <div>
+              <h3>SteamGroom 3-in-1</h3>
+              <p class="card-sub">Steam brush · de-shed · self-clean</p>
+            </div>
+            <div class="price-row">
+              <span class="price">$39</span>
+              <span class="compare">$49</span>
+              <span class="save">Save $10</span>
+            </div>
+            <p class="desc">A fine mist lifts loose fur and dander before the bristles reach them, so you pull less and your pet notices less. Quiet enough for nervous cats, USB-C charged, one button.</p>
+            <div class="variant">
+              <label for="var-groom">Finish</label>
+              <div class="select-wrap"><select id="var-groom" data-variant="groom">
+                <option value="sand">Warm sand</option>
+                <option value="sage">Sage green</option>
+              </select></div>
+            </div>
+            <div class="card-actions">
+              <button class="btn-add" data-add="groom">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 8h12l-1.2 11.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6.8a3 3 0 0 1 6 0V8"/></svg>
+                Add to bag
+              </button>
+              <span class="micro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12.5l5 5L20 6"/></svg>Free US shipping · 30-day guarantee</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Stillwater -->
+        <article class="card reveal" data-product="fountain">
+          <div class="card-media">
+            <span class="badge">New</span>
+            <svg viewBox="0 0 400 300" role="img" aria-label="Illustration of the Stillwater cordless stainless steel water fountain with bubbling water">
+              <defs>
+                <linearGradient id="steelG" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#F7F7F2"/><stop offset=".55" stop-color="#DCDFD9"/><stop offset="1" stop-color="#BFC4C0"/>
+                </linearGradient>
+              </defs>
+              <rect width="400" height="300" fill="#EFEEE6"/>
+              <ellipse cx="200" cy="242" rx="118" ry="15" fill="#BDB6A4" opacity=".3"/>
+              <path d="M106 162h188l-12 64a24 24 0 0 1-24 21H142a24 24 0 0 1-24-21Z" fill="url(#steelG)" stroke="#B9BEBA" stroke-width="1.3"/>
+              <path d="M106 162h188l-4 16H110Z" fill="#F8F7F3"/>
+              <ellipse cx="200" cy="162" rx="94" ry="20" fill="#F8F7F3" stroke="#B9BEBA" stroke-width="1.3"/>
+              <ellipse cx="200" cy="159" rx="72" ry="14" fill="#D9E5E4"/>
+              <path d="M176 160c0-10 10-16 24-16s24 6 24 16" fill="none" stroke="#BFD3D4" stroke-width="2"/>
+              <path d="M186 160c0-6 6-10 14-10s14 4 14 10" fill="none" stroke="#BFD3D4" stroke-width="2"/>
+              <g stroke="#A9C8CD" stroke-width="3" fill="none" stroke-linecap="round" opacity=".9">
+                <path d="M200 148v-8"/><path d="M192 150c-2-4-1-8 1-10"/><path d="M208 150c2-4 1-8-1-10"/>
+              </g>
+              <g fill="#A9C8CD" opacity=".6">
+                <circle cx="200" cy="130" r="2.6"/><circle cx="186" cy="124" r="1.8"/><circle cx="214" cy="122" r="1.8"/>
+              </g>
+              <rect x="150" y="200" width="14" height="26" rx="5" fill="#CBD2CE" opacity=".65"/>
+              <rect x="153" y="214" width="8" height="3" rx="1.5" fill="#9FB4B0"/>
+              <path d="M320 96l2.4 6.4 6.4 2.4-6.4 2.4-2.4 6.4-2.4-6.4-6.4-2.4 6.4-2.4Z" fill="#33452F" opacity=".25"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <div class="rating"><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg></span> <span>4.9 · sample reviews</span></div>
+            <div>
+              <h3>Stillwater Fountain</h3>
+              <p class="card-sub">Cordless stainless fountain · 74 oz</p>
+            </div>
+            <div class="price-row">
+              <span class="price">$79</span>
+              <span class="compare">$99</span>
+              <span class="save">Save $20</span>
+            </div>
+            <p class="desc">No cord to chew, no pump hum at 2 a.m. A 4,000 mAh battery runs for weeks, the stainless top goes in the dishwasher, and the motion sensor only stirs the water when someone is near.</p>
+            <div class="variant">
+              <label for="var-fountain">Bundle</label>
+              <div class="select-wrap"><select id="var-fountain" data-variant="fountain">
+                <option value="std">Fountain + 2 filters</option>
+                <option value="kit">Fountain + 6 filters</option>
+              </select></div>
+            </div>
+            <div class="card-actions">
+              <button class="btn-add" data-add="fountain">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 8h12l-1.2 11.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6.8a3 3 0 0 1 6 0V8"/></svg>
+                Add to bag
+              </button>
+              <span class="micro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12.5l5 5L20 6"/></svg>Free US shipping · 30-day guarantee</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ add-ons ============ -->
+  <div class="addons">
+    <div class="wrap addons-inner">
+      <div class="addons-lead">
+        <b>One small thing</b>
+        <span>Add to any order — ships in the same box.</span>
+      </div>
+      <div class="addon-row">
+        <div class="addon">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="9" rx="7" ry="3.2"/><path d="M5 9v3c0 1.8 3.1 3.2 7 3.2s7-1.4 7-3.2V9"/><path d="M5 12v3c0 1.8 3.1 3.2 7 3.2s7-1.4 7-3.2v-3"/></svg></span>
+          <span class="txt"><b>Fountain filter 6-pack</b><span>$16 · swap every 4 weeks</span></span>
+          <button data-add="filters" aria-label="Add Fountain filter 6-pack to bag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+        </div>
+        <div class="addon">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="6" width="16" height="13" rx="3"/><path d="M8 6V4h8v2"/><circle cx="12" cy="12.5" r="2.4"/><path d="M9.6 16.4c.8-.9 1.6-1.2 2.4-1.2s1.6.3 2.4 1.2"/></svg></span>
+          <span class="txt"><b>Paw &amp; coat wipes</b><span>$14 · 3 packs of 50</span></span>
+          <button data-add="wipes" aria-label="Add Paw and coat wipes to bag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ promise ============ -->
+  <section class="section promise" id="promise">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:0">
+        <div>
+          <p class="eyebrow">The HearthPaws standard</p>
+          <h2>Fewer products. Better reasons.</h2>
+          <p class="lede">Every item has to pass the same four tests before it earns a place on this page. Most don't.</p>
+        </div>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-4.6-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.4-9 9-9 9Z"/></svg></span>
+          <h3>Materials we'd live with</h3>
+          <p>Food-grade stainless, OEKO-TEX-standard covers, foam with a stated density. No dyes, no scent sprays, nothing your pet chews on by accident.</p>
+        </div>
+        <div class="pillar">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg></span>
+          <h3>Stock held in the US</h3>
+          <p>We keep inventory in US warehouses, so orders leave in 1–3 business days and arrive in 3–7 — not three weeks from overseas.</p>
+        </div>
+        <div class="pillar">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6Z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <h3>The 30-day guarantee</h3>
+          <p>If your pet won't use it, tell us within 30 days. We'll replace it or refund you — and for a defect, we cover the return label.</p>
+        </div>
+        <div class="pillar">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5h16v11H9l-5 4Z"/><path d="M8 9h8M8 12h5"/></svg></span>
+          <h3>Answers from a person</h3>
+          <p>Sizing questions, a filter that arrived cracked, a dog who hates the brush — a real person replies within one business day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ reviews ============ -->
+  <section class="section reviews" id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Reviews</p>
+          <h2>What pet parents say</h2>
+          <div class="rating-summary">
+            <span class="big">4.8</span>
+            <span class="stars" aria-hidden="true" style="color:var(--clay)">
+              <svg viewBox="0 0 24 24" fill="currentColor" style="width:15px;height:15px"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" style="width:15px;height:15px"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" style="width:15px;height:15px"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" style="width:15px;height:15px"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" style="width:15px;height:15px"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+            </span>
+            <span>average across 218 sample reviews</span>
+          </div>
+        </div>
+        <p class="note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+          Template copy — replace with verified customer reviews before launch
+        </p>
+      </div>
+
+      <div class="review-grid">
+        <figure class="review reveal">
+          <span class="stars" aria-label="5 out of 5">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+          </span>
+          <blockquote>"Our 11-year-old lab mix stopped pacing at night. She walks onto it, circles twice, and she's out. I wish I'd bought the large sooner."</blockquote>
+          <figcaption><span class="avatar">JM</span><span><b>Jordan M.</b> · Large Haven Bed · <em>sample</em></span></figcaption>
+        </figure>
+
+        <figure class="review reveal">
+          <span class="stars" aria-label="5 out of 5">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+          </span>
+          <blockquote>"Two long-haired cats and a couch that used to be beige. Ten minutes with this and the brush head was full. The steam means no yanking, which is the real win."</blockquote>
+          <figcaption><span class="avatar">AR</span><span><b>Ana R.</b> · SteamGroom 3-in-1 · <em>sample</em></span></figcaption>
+        </figure>
+
+        <figure class="review reveal">
+          <span class="stars" aria-label="5 out of 5">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+          </span>
+          <blockquote>"The cordless part sold it. Ours sits in the hallway where there's no outlet and the water stays cold and moving. Battery lasted almost five weeks on sensor mode."</blockquote>
+          <figcaption><span class="avatar">DK</span><span><b>Devon K.</b> · Stillwater Fountain · <em>sample</em></span></figcaption>
+        </figure>
+
+        <figure class="review reveal">
+          <span class="stars" aria-label="5 out of 5">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+          </span>
+          <blockquote>"Arrived in three days, cover washed clean after a muddy weekend, and the foam hasn't flattened. That's more than I can say for the $40 one from the pet chain."</blockquote>
+          <figcaption><span class="avatar">PS</span><span><b>Priya S.</b> · Medium Haven Bed · <em>sample</em></span></figcaption>
+        </figure>
+
+        <figure class="review reveal">
+          <span class="stars" aria-label="4 out of 5">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+          </span>
+          <blockquote>"Only reason for four stars is the mist tank — it's small, so I refill it every other day. Everything else is exactly what I wanted and my cat tolerates it."</blockquote>
+          <figcaption><span class="avatar">LC</span><span><b>Luis C.</b> · SteamGroom 3-in-1 · <em>sample</em></span></figcaption>
+        </figure>
+
+        <figure class="review reveal">
+          <span class="stars" aria-label="5 out of 5">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9Z"/></svg>
+          </span>
+          <blockquote>"Ordered the bed and the wipes on a Friday, both on my porch Tuesday. The little hand-written-style card was a nice touch — feels like a small brand, not a warehouse."</blockquote>
+          <figcaption><span class="avatar">TW</span><span><b>Tess W.</b> · Haven Bed + wipes · <em>sample</em></span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section faq" id="faq">
+    <div class="wrap faq-grid">
+      <div>
+        <p class="eyebrow">Good to know</p>
+        <h2 style="margin:.7rem 0 .9rem">Questions, answered</h2>
+        <p class="lede" style="font-size:.95rem">The things people ask us most before their first order.</p>
+        <div class="faq-aside" style="margin-top:1.6rem">
+          <h3>Still wondering?</h3>
+          <p>Tell us your pet's breed, weight and what's not working — we'll point you to the right size or tell you honestly if something isn't a fit.</p>
+          <a class="mail" href="mailto:hello@hearthpaws.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></svg>
+            hello@hearthpaws.com
+          </a>
+        </div>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">When will my order arrive?<span class="sign" aria-hidden="true"></span></button>
+          <div class="faq-a"><div><p>Orders placed before 2 p.m. ET leave our US warehouse the same or next business day — always within 1–3. Delivery is typically 3–7 business days after dispatch, and tracking lands in your inbox within 24 hours of shipping.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">What if my pet won't use it?<span class="sign" aria-hidden="true"></span></button>
+          <div class="faq-a"><div><p>You have 30 days from delivery. If it simply isn't a match, send it back in clean, resellable condition and we'll refund the item price. If anything is defective — a pump that won't prime, a seam that split — we cover the return label and replace it.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How do I choose the right bed size?<span class="sign" aria-hidden="true"></span></button>
+          <div class="faq-a"><div><p>Measure how your dog actually sleeps, not how they stand. Medium (28 × 22 in) suits most dogs up to 45 lb, Large (36 × 27 in) up to 75 lb, and X-Large (44 × 32 in) for big breeds and dogs who sprawl. When in doubt, size up — a bed that's too small is the number one reason for returns.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Is the fountain safe to leave running?<span class="sign" aria-hidden="true"></span></button>
+          <div class="faq-a"><div><p>Yes. It runs on a 4,000 mAh battery with dry-run protection, so the pump stops itself when the tank empties, and there's no cord for a chewer to find. The stainless top is dishwasher-safe; hand-wash the tank. Change the filter every four weeks.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How do I clean the bed cover?<span class="sign" aria-hidden="true"></span></button>
+          <div class="faq-a"><div><p>Unzip it and machine-wash cold on a gentle cycle, then air-dry or tumble low. Don't wash the foam core — spot-clean it and let it air out. The non-slip base is wiped clean with a damp cloth.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Do you ship outside the US?<span class="sign" aria-hidden="true"></span></button>
+          <div class="faq-a"><div><p>At launch we ship to the contiguous United States only, with free shipping over $50. Canada is next on the list — join the email list and we'll tell you when it opens.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Where are your products made?<span class="sign" aria-hidden="true"></span></button>
+          <div class="faq-a"><div><p>Our partner factories are in China and Vietnam, chosen for specific materials rather than the lowest quote. We sample every batch, hold stock in US warehouses, and list the material specs plainly on each product page — including foam density.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ signup ============ -->
+  <section class="section signup">
+    <div class="wrap">
+      <div class="signup-inner">
+        <div>
+          <h2>A quieter inbox, once a month.</h2>
+          <p>New arrivals, honest care notes, and the occasional early access. No daily discounts, no countdown timers. Unsubscribe in one click.</p>
+        </div>
+        <div>
+          <form id="signupForm" novalidate>
+            <label class="sr-only" for="email">Email address</label>
+            <input id="email" type="email" name="email" placeholder="you@email.com" autocomplete="email" required>
+            <button class="btn btn-primary" type="submit">Join</button>
+          </form>
+          <small>By joining you agree to receive occasional email from HearthPaws.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ footer ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#top">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="#F7F1E6"><ellipse cx="16" cy="21" rx="6" ry="4.6"/><ellipse cx="9" cy="15" rx="2.6" ry="3.2"/><ellipse cx="23" cy="15" rx="2.6" ry="3.2"/><ellipse cx="12.5" cy="10" rx="2.3" ry="2.9"/><ellipse cx="19.5" cy="10" rx="2.3" ry="2.9"/></svg>
+          </span>
+          <span><b>Hearth</b>Paws</span>
+        </a>
+        <p>Premium comfort for the pets who wait for you. Small range, honest specs, held in US warehouses.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#shop">The Haven Bed</a></li>
+          <li><a href="#shop">SteamGroom 3-in-1</a></li>
+          <li><a href="#shop">Stillwater Fountain</a></li>
+          <li><a href="#shop">Filters &amp; refills</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#faq">Shipping &amp; delivery</a></li>
+          <li><a href="#faq">Returns &amp; guarantee</a></li>
+          <li><a href="#faq">Size guide</a></li>
+          <li><a href="mailto:hello@hearthpaws.com">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#promise">Our standard</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 HearthPaws. All rights reserved.</span>
+      <span class="demo">Demo storefront · reviews and product copy are sample content · checkout not connected</span>
+      <span class="pay"><span>VISA</span><span>MC</span><span>AMEX</span><span>PAYPAL</span></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ cart drawer ============ -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true">
+  <div class="drawer-head">
+    <h2 id="cartTitle">Your bag <span class="count-pill" id="drawerCount">0</span></h2>
+    <button class="icon-btn" id="cartClose" aria-label="Close bag">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+
+  <div class="ship-meter">
+    <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg><span id="shipMsg">Add $50.00 more for free US shipping</span></p>
+    <div class="meter"><i id="shipBar"></i></div>
+  </div>
+
+  <div class="drawer-body" id="cartBody">
+    <div class="cart-empty" id="cartEmpty">
+      <svg class="art" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 8h12l-1.2 11.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6.8a3 3 0 0 1 6 0V8"/></svg>
+      <h3>Your bag is empty</h3>
+      <p>Start with the Haven Bed — it's the one most people come back for.</p>
+      <button class="btn btn-ghost" id="emptyShop" style="padding:.7rem 1.2rem;font-size:.85rem">Browse the collection</button>
+    </div>
+    <div id="cartLines"></div>
+  </div>
+
+  <div class="drawer-foot">
+    <div class="totals">
+      <div class="row"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+      <div class="row"><span>Shipping</span><span id="shipping">Free over $50</span></div>
+      <div class="row grand"><span>Total</span><span id="total">$0.00</span></div>
+    </div>
+    <button class="checkout" id="checkoutBtn">
+      Checkout
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </button>
+    <p class="foot-note" id="drawerNotice">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+      <span>Preview store · checkout not live yet</span>
+    </p>
+  </div>
+</aside>
+
+<div class="toast-host" id="toastHost" aria-live="polite" aria-atomic="false"></div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- catalogue ---------- */
+  var CATALOG = {
+    bed: {
+      name: "The Haven Bed",
+      art: "bed",
+      variants: [
+        { id: "m",  label: "Medium · 28 × 22 in",   price: 89,  compare: 119 },
+        { id: "l",  label: "Large · 36 × 27 in",    price: 109, compare: 139 },
+        { id: "xl", label: "X-Large · 44 × 32 in",  price: 129, compare: 159 }
+      ]
+    },
+    groom: {
+      name: "SteamGroom 3-in-1",
+      art: "groom",
+      variants: [
+        { id: "sand", label: "Warm sand", price: 39, compare: 49 },
+        { id: "sage", label: "Sage green", price: 39, compare: 49 }
+      ]
+    },
+    fountain: {
+      name: "Stillwater Fountain",
+      art: "fountain",
+      variants: [
+        { id: "std", label: "Fountain + 2 filters", price: 79,  compare: 99 },
+        { id: "kit", label: "Fountain + 6 filters", price: 95,  compare: 115 }
+      ]
+    },
+    filters: {
+      name: "Fountain Filter 6-Pack",
+      art: "filters",
+      variants: [ { id: "std", label: "6 filters", price: 16, compare: 0 } ]
+    },
+    wipes: {
+      name: "Paw & Coat Wipes",
+      art: "wipes",
+      variants: [ { id: "std", label: "3 packs of 50", price: 14, compare: 0 } ]
+    }
+  };
+
+  var FREE_SHIP = 50;
+  var STORE_KEY = "hearthpaws-cart-v1";
+
+  /* ---------- tiny helpers ---------- */
+  function $(sel, root) { return (root || document).querySelector(sel); }
+  function $$(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
+  function money(n) { return "$" + (Math.round(n * 100) / 100).toFixed(2); }
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function variantOf(pid, vid) {
+    var p = CATALOG[pid];
+    if (!p) return null;
+    for (var i = 0; i < p.variants.length; i++) {
+      if (p.variants[i].id === vid) return p.variants[i];
+    }
+    return null;
+  }
+
+  /* ---------- state ---------- */
+  var cart = {};              /* key "pid:vid" -> qty */
+  var lastFocus = null;
+  var drawer = $("#cartDrawer");
+  var scrim = $("#scrim");
+  var toastHost = $("#toastHost");
+
+  function loadCart() {
+    try {
+      var raw = window.localStorage.getItem(STORE_KEY);
+      if (!raw) return;
+      var parsed = JSON.parse(raw);
+      if (!parsed || typeof parsed !== "object") return;
+      Object.keys(parsed).forEach(function (key) {
+        var parts = key.split(":");
+        var qty = parseInt(parsed[key], 10);
+        if (qty > 0 && qty < 1000 && variantOf(parts[0], parts[1])) cart[key] = qty;
+      });
+    } catch (e) { /* storage unavailable — carry on with an in-memory cart */ }
+  }
+
+  function saveCart() {
+    try { window.localStorage.setItem(STORE_KEY, JSON.stringify(cart)); } catch (e) {}
+  }
+
+  function cartCount() {
+    var n = 0;
+    Object.keys(cart).forEach(function (k) { n += cart[k]; });
+    return n;
+  }
+
+  function cartSubtotal() {
+    var sum = 0;
+    Object.keys(cart).forEach(function (k) {
+      var parts = k.split(":");
+      var v = variantOf(parts[0], parts[1]);
+      if (v) sum += v.price * cart[k];
+    });
+    return sum;
+  }
+
+  /* ---------- thumbnails (compact SVG per product) ---------- */
+  var THUMBS = {
+    bed: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#F3E8D8"/><ellipse cx="50" cy="72" rx="36" ry="7" fill="#C9AE8C" opacity=".3"/><path d="M12 62c0-6 5-11 11-11h54c6 0 11 5 11 11v9c0 5-4 9-9 9H21c-5 0-9-4-9-9Z" fill="#BD9168"/><ellipse cx="50" cy="62" rx="35" ry="8" fill="#DBBD97"/><ellipse cx="50" cy="61" rx="27" ry="6" fill="#EFE2CE"/><path d="M28 62c0-8 7-13 15-12 7 1 11 5 16 5 2 0 3 1 3 3s-3 4-7 4Z" fill="#CE9060"/><circle cx="31" cy="53" r="8" fill="#D59A67"/><path d="M37 47c4-1 6 2 5 5-1 3-3 4-6 4 2-3 2-6 1-9Z" fill="#A96F42"/><ellipse cx="25" cy="56" rx="5" ry="3.6" fill="#E8BB8E"/><circle cx="23" cy="55" r="1.4" fill="#3A2A20"/></svg>',
+    groom: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#F2EEE4"/><circle cx="50" cy="52" r="30" fill="#E9DDC9"/><g transform="rotate(-9 50 55)"><rect x="39" y="38" width="22" height="38" rx="10" fill="#FBF8F1" stroke="#D3C6B2"/><rect x="42" y="60" width="16" height="9" rx="4" fill="#33452F"/><rect x="36" y="27" width="28" height="14" rx="6" fill="#EFE6D6" stroke="#D3C6B2"/><g stroke="#B9A88F" stroke-width="1.6" stroke-linecap="round"><path d="M42 31v6M46 30v8M50 30v8M54 30v8M58 31v6"/></g></g><g fill="#8FA487" opacity=".7"><circle cx="72" cy="26" r="3"/><circle cx="79" cy="20" r="2"/><circle cx="77" cy="33" r="1.8"/></g></svg>',
+    fountain: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#EFEEE6"/><ellipse cx="50" cy="74" rx="34" ry="5" fill="#BDB6A4" opacity=".35"/><path d="M22 48h56l-4 24a9 9 0 0 1-9 7H35a9 9 0 0 1-9-7Z" fill="#DDE0DB" stroke="#B9BEBA" stroke-width="1"/><ellipse cx="50" cy="48" rx="28" ry="6.5" fill="#F7F6F1" stroke="#B9BEBA" stroke-width="1"/><ellipse cx="50" cy="47.5" rx="21" ry="4.4" fill="#D9E5E4"/><path d="M43 48c0-3 3-5 7-5s7 2 7 5" fill="none" stroke="#BFD3D4" stroke-width="1.4"/><g stroke="#A9C8CD" stroke-width="1.8" fill="none" stroke-linecap="round"><path d="M50 42v-4"/><path d="M45 43c-1-2-1-4 0-5"/><path d="M55 43c1-2 1-4 0-5"/></g><g fill="#A9C8CD" opacity=".7"><circle cx="50" cy="34" r="1.6"/><circle cx="43" cy="33" r="1.1"/><circle cx="57" cy="33" r="1.1"/></g></svg>',
+    filters: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#F1EEE5"/><g fill="none" stroke="#6E8570" stroke-width="3"><ellipse cx="50" cy="36" rx="22" ry="8"/><ellipse cx="50" cy="50" rx="22" ry="8"/><ellipse cx="50" cy="64" rx="22" ry="8"/></g></svg>',
+    wipes: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#F1EEE5"/><rect x="28" y="32" width="44" height="40" rx="6" fill="#E4D6BF" stroke="#C9B79B"/><ellipse cx="50" cy="52" rx="7" ry="6" fill="#8C7A62"/><circle cx="43" cy="46" r="2.4" fill="#8C7A62"/><circle cx="57" cy="46" r="2.4" fill="#8C7A62"/></svg>'
+  };
+
+  /* ---------- render ---------- */
+  function renderBadge() {
+    var n = cartCount();
+    var badge = $("#cartCount");
+    badge.textContent = n;
+    badge.setAttribute("aria-label", n + (n === 1 ? " item in bag" : " items in bag"));
+    $("#drawerCount").textContent = n;
+    badge.classList.remove("pop");
+    void badge.offsetWidth;
+    if (n > 0) badge.classList.add("pop");
+  }
+
+  function renderCart() {
+    var lines = $("#cartLines");
+    var keys = Object.keys(cart);
+    var empty = $("#cartEmpty");
+    var html = "";
+
+    if (keys.length === 0) {
+      empty.style.display = "flex";
+      lines.innerHTML = "";
+    } else {
+      empty.style.display = "none";
+      keys.forEach(function (key) {
+        var parts = key.split(":");
+        var pid = parts[0], vid = parts[1];
+        var product = CATALOG[pid];
+        var v = variantOf(pid, vid);
+        if (!product || !v) return;
+        var qty = cart[key];
+        var thumb = THUMBS[product.art] || THUMBS.bed;
+        html +=
+          '<div class="line" data-line="' + esc(key) + '">' +
+            '<div class="line-thumb">' + thumb + '</div>' +
+            '<div class="line-info">' +
+              '<b>' + esc(product.name) + '</b>' +
+              '<span class="var">' + esc(v.label) + '</span>' +
+              '<span class="qty">' +
+                '<button type="button" data-dec="' + esc(key) + '" aria-label="Decrease quantity of ' + esc(product.name) + '">' +
+                  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14"/></svg>' +
+                '</button>' +
+                '<span aria-live="off">' + qty + '</span>' +
+                '<button type="button" data-inc="' + esc(key) + '" aria-label="Increase quantity of ' + esc(product.name) + '">' +
+                  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg>' +
+                '</button>' +
+              '</span>' +
+            '</div>' +
+            '<div class="line-right">' +
+              '<span class="amt">' + money(v.price * qty) + '</span>' +
+              '<button type="button" class="rm" data-rm="' + esc(key) + '">Remove</button>' +
+            '</div>' +
+          '</div>';
+      });
+      lines.innerHTML = html;
+    }
+
+    var sub = cartSubtotal();
+    var shipMsg = $("#shipMsg");
+    var bar = $("#shipBar");
+    if (sub >= FREE_SHIP) {
+      shipMsg.textContent = "Free US shipping unlocked";
+    } else if (sub === 0) {
+      shipMsg.textContent = "Add " + money(FREE_SHIP) + " more for free US shipping";
+    } else {
+      shipMsg.textContent = "You're " + money(FREE_SHIP - sub) + " from free US shipping";
+    }
+    bar.style.width = Math.min(100, (sub / FREE_SHIP) * 100) + "%";
+
+    $("#subtotal").textContent = money(sub);
+    $("#shipping").textContent = sub === 0 ? "—" : (sub >= FREE_SHIP ? "Free" : money(4.95));
+    $("#total").textContent = money(sub === 0 ? 0 : sub + (sub >= FREE_SHIP ? 0 : 4.95));
+    renderBadge();
+    saveCart();
+  }
+
+  /* ---------- cart actions ---------- */
+  function addToCart(pid, vid) {
+    var v = variantOf(pid, vid);
+    if (!v) return;
+    var key = pid + ":" + vid;
+    cart[key] = (cart[key] || 0) + 1;
+    renderCart();
+    openDrawer();
+  }
+
+  function changeQty(key, delta) {
+    if (!cart[key]) return;
+    cart[key] += delta;
+    if (cart[key] <= 0) delete cart[key];
+    renderCart();
+  }
+
+  function removeLine(key) {
+    delete cart[key];
+    renderCart();
+  }
+
+  /* ---------- drawer ---------- */
+  function openDrawer() {
+    if (drawer.classList.contains("open")) return;
+    lastFocus = document.activeElement;
+    drawer.inert = false;
+    drawer.classList.add("open");
+    scrim.classList.add("open");
+    drawer.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    $("#cartClose").focus();
+  }
+
+  function closeDrawer() {
+    if (!drawer.classList.contains("open")) return;
+    drawer.classList.remove("open");
+    scrim.classList.remove("open");
+    drawer.setAttribute("aria-hidden", "true");
+    drawer.inert = true;
+    document.body.style.overflow = "";
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  /* ---------- toast ---------- */
+  function toast(msg) {
+    var el = document.createElement("div");
+    el.className = "toast";
+    el.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 12.5l5 5L20 6"/></svg><span></span>';
+    $("span", el).textContent = msg;
+    toastHost.appendChild(el);
+    window.setTimeout(function () {
+      el.classList.add("out");
+      window.setTimeout(function () {
+        if (el.parentNode) el.parentNode.removeChild(el);
+      }, 320);
+    }, 2600);
+  }
+
+  /* ---------- wire product cards ---------- */
+  $$("[data-variant]").forEach(function (select) {
+    select.addEventListener("change", function () {
+      var pid = select.getAttribute("data-variant");
+      var card = select.closest(".card");
+      var v = variantOf(pid, select.value);
+      if (!card || !v) return;
+      var priceEl = $("[data-price]", card);
+      var compareEl = $("[data-compare]", card);
+      var saveEl = $("[data-save]", card);
+      if (priceEl) priceEl.textContent = money(v.price).replace(".00", "");
+      if (compareEl) compareEl.textContent = v.compare ? money(v.compare).replace(".00", "") : "";
+      if (saveEl) {
+        if (v.compare) {
+          saveEl.textContent = "Save " + money(v.compare - v.price).replace(".00", "");
+          saveEl.style.display = "";
+        } else {
+          saveEl.style.display = "none";
+        }
+      }
+    });
+  });
+
+  $$("[data-add]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var pid = btn.getAttribute("data-add");
+      var select = $('[data-variant="' + pid + '"]');
+      var vid = select ? select.value : CATALOG[pid].variants[0].id;
+      addToCart(pid, vid);
+    });
+  });
+
+  $("#cartOpen").addEventListener("click", openDrawer);
+  $("#cartClose").addEventListener("click", closeDrawer);
+  scrim.addEventListener("click", closeDrawer);
+  $("#emptyShop").addEventListener("click", function () {
+    closeDrawer();
+    var shop = $("#shop");
+    if (shop) shop.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  $("#cartBody").addEventListener("click", function (e) {
+    var t = e.target;
+    var btn = t.closest ? t.closest("[data-inc],[data-dec],[data-rm]") : null;
+    if (!btn) return;
+    if (btn.hasAttribute("data-inc")) changeQty(btn.getAttribute("data-inc"), 1);
+    else if (btn.hasAttribute("data-dec")) changeQty(btn.getAttribute("data-dec"), -1);
+    else if (btn.hasAttribute("data-rm")) removeLine(btn.getAttribute("data-rm"));
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeDrawer();
+    if (e.key === "Tab" && drawer.classList.contains("open")) {
+      var focusables = $$('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])', drawer)
+        .filter(function (el) { return el.offsetParent !== null && !el.disabled; });
+      if (!focusables.length) return;
+      var first = focusables[0];
+      var last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault(); last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first.focus();
+      }
+    }
+  });
+
+  var noticeTimer = null;
+  function drawerNotice(msg) {
+    var el = $("#drawerNotice");
+    if (!el) return;
+    $("span", el).textContent = msg;
+    el.classList.add("warn");
+    window.clearTimeout(noticeTimer);
+    noticeTimer = window.setTimeout(function () {
+      el.classList.remove("warn");
+      $("span", el).textContent = "Preview store · checkout not live yet";
+    }, 4200);
+  }
+
+  $("#checkoutBtn").addEventListener("click", function () {
+    if (cartCount() === 0) {
+      drawerNotice("Your bag is empty — add something first");
+      return;
+    }
+    drawerNotice("This is a preview store — checkout opens soon.");
+  });
+
+  /* ---------- FAQ ---------- */
+  $$(".faq-item").forEach(function (item) {
+    var btn = $(".faq-q", item);
+    btn.addEventListener("click", function () {
+      var isOpen = item.classList.contains("open");
+      $$(".faq-item").forEach(function (other) {
+        other.classList.remove("open");
+        $(".faq-q", other).setAttribute("aria-expanded", "false");
+      });
+      if (!isOpen) {
+        item.classList.add("open");
+        btn.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+
+  /* ---------- signup ---------- */
+  var signup = $("#signupForm");
+  if (signup) {
+    signup.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var input = $("#email");
+      var value = input.value.trim();
+      var ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
+      if (!ok) {
+        toast("That email doesn't look right — mind checking it?");
+        input.focus();
+        return;
+      }
+      signup.reset();
+      toast("You're on the list. Talk soon.");
+    });
+  }
+
+  /* ---------- header shadow ---------- */
+  var header = $("#siteHeader");
+  function onScroll() {
+    if (window.scrollY > 8) header.classList.add("stuck");
+    else header.classList.remove("stuck");
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- reveal on scroll ---------- */
+  var reveals = $$(".reveal");
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("in"); });
+  }
+
+  /* ---------- boot ---------- */
+  drawer.inert = true;
+  loadCart();
+  renderCart();
+})();
+</script>
+</body>
+</html>
