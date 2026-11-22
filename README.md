@@ -1,4 +1,4 @@
-# HearthPaws — premium pet storefront (preview build)
+# HearthPaws — premium pet storefront
 
 A single-file, dependency-free English storefront for a **US-market premium pet dropshipping store**.
 Open `index.html` in any browser — there is no build step, no CDN, no external image.
@@ -9,8 +9,11 @@ Open `index.html` in any browser — there is no build step, no CDN, no external
 - Cart: slide-out drawer with quantity controls, subtotal, free-shipping meter ($50 threshold),
   localStorage persistence, keyboard/Escape close, focus return.
 
-> **Placeholder content:** reviews, star ratings and the "218 sample reviews" count are template copy,
-> clearly labelled in the UI. The checkout button is a preview only — no payment processor is connected.
+> **Live checkout:** the drawer's "Checkout with PayPal" button posts a PayPal Cart Upload form
+> (`cmd=_cart`, `business=chaeminleeandrew@gmail.com`, USD, $4.95 flat handling under $50) to
+> `paypal.com/cgi-bin/webscr`, with `?checkout=success` / `?checkout=cancel` return states.
+> No customer reviews are shown yet — the reviews section says "Verified reviews — coming soon"
+> until real orders ship.
 
 ---
 
@@ -85,20 +88,18 @@ small bulk buy (50–100 units) once you have 50+ sales/month and know your real
 
 ## 3. Launch checklist
 
-1. **Replace placeholder content** — reviews, star counts, "218 sample reviews", the `4.8` hero badge.
-   Keep the "sample" labels off once real reviews replace them.
-2. **Connect a payment path** — pick one:
-   - *Fastest:* Stripe **Payment Links** / PayPal Smart Buttons behind the Checkout button (no backend).
-   - *Proper store:* Shopify + a dropshipping app (Spocket, CJ's Shopify app, Zendrop), reusing this page's
-     copy and illustrations as the theme.
-   - Keep the drawer's "Checkout" button pointing at your hosted checkout URL; the current handler only shows
-     a preview notice.
+1. **Reviews** — done for launch: no sample reviews or star counts are shown. Add real, verified
+   reviews to the `#reviews` section as orders ship.
+2. **Payment path** — connected: PayPal Cart Upload (`chaeminleeandrew@gmail.com`). Confirm that account
+   can receive business payments (a Personal account cannot), then place one small live test order.
+   - Alternative: Stripe **Payment Links** / PayPal Smart Buttons, or Shopify + a dropshipping app.
+   - PayPal Cart Upload is already wired in the drawer's "Checkout with PayPal" button.
 3. **Set fulfilment** — connect the supplier account, confirm US-warehouse stock, and order one sample of each
    SKU to your own address before spending on ads.
 4. **Legal & tax** — real shipping/returns policy pages, state sales-tax registration (or Shopify Tax),
-   business entity, and only claims you can substantiate ("vet-approved" needs an actual vet; "OEKO-TEX" needs
-   the certificate — the current copy is aspirational placeholder, rewrite it to match your suppliers).
-5. **Publish** — GitHub Pages is enough for the preview:
+   business entity, and only claims you can substantiate ("vet-approved" needs an actual vet). The OEKO-TEX
+   reference has been removed; the copy now says 304 stainless steel and washable, pet-safe fabrics.
+5. **Publish** — GitHub Pages serves the live store:
    ```
    git init && git add . && git commit -m "HearthPaws storefront"
    gh repo create hearthpaws --public --source=. --push
