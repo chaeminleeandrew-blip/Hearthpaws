@@ -1,112 +1,132 @@
 # HearthPaws — premium pet storefront
 
 A single-file, dependency-free English storefront for a **US-market premium pet dropshipping store**.
-Open `index.html` in any browser — there is no build step, no CDN, no external image.
+Open `index.html` in any browser — no build step, no CDN, no third-party script.
 
 - Brand: **HearthPaws** — "Premium comfort for the pets who wait for you."
 - Palette: cream / moss green / clay. Type: system serif display + system sans body.
-- Illustrations: hand-written inline SVG (no broken image links, nothing to license).
+- Product photography: **real supplier photos** from the live CJdropshipping listings, downloaded to
+  `assets/` (760 × 760 JPEG, ~40–100 KB each) so the cards show the item that actually ships.
+  Decorative art (hero, cart thumb for filters) remains hand-written inline SVG.
 - Cart: slide-out drawer with quantity controls, subtotal, free-shipping meter ($50 threshold),
-  localStorage persistence, keyboard/Escape close, focus return.
+  localStorage persistence (`hearthpaws-cart-v2`), keyboard/Escape close, focus return.
 
 > **Live checkout:** the drawer's "Checkout with PayPal" button posts a PayPal Cart Upload form
 > (`cmd=_cart`, `business=chaeminleeandrew@gmail.com`, USD, $4.95 flat handling under $50) to
 > `paypal.com/cgi-bin/webscr`, with `?checkout=success` / `?checkout=cancel` return states.
-> No customer reviews are shown yet — the reviews section says "Verified reviews — coming soon"
-> until real orders ship.
+> Each cart line's `item_number` is now the **CJdropshipping SKU**, so a paid order can be pasted or
+> mapped straight into a CJ order without a lookup table.
+> No customer reviews are shown — the reviews section says "Verified reviews — coming soon".
 
 ---
 
-## 1. Product lineup and real economics
+## 1. Product lineup — one supplier, four SKUs
 
-Prices as shipped in `index.html`. Supplier costs are **dropship / small-order US-warehouse prices**,
-not factory FOB, so they include the item, inbound freight and the supplier's margin.
+**Every purchasable item is a CJdropshipping product.** Orders can be fulfilled end-to-end from a
+single CJ account (`CJ6093490`, `chaeminleeandrew@gmail.com`) with no second supplier.
 
-| # | Product (SKU name) | Supplier cost (US warehouse) | Retail | Gross margin | Contribution after card fees* |
-|---|---|---|---|---|---|
-| 1 | **The Haven Bed** — orthopedic memory-foam pet bed, washable cover, S–XL | $26.50–$34 (M) · $34–$42 (L) · $42–$48 (XL) | $89 / $109 / $129 | 62–70% | ≈ $54 (M) · $66 (L) · $78 (XL) |
-| 2 | **SteamGroom 3-in-1** — steam + de-shed brush, self-clean, USB-C | $8–$13 landed ($7.31–$9.50 item + shipping) | $39 | ≈ 67–70% | ≈ $26 |
-| 3 | **Stillwater Fountain** — cordless 74 oz / 2.2 L stainless fountain, 4,000 mAh, motion sensor | $19–$28 | $79 (with 6 filters: $95) | 65–76% | ≈ $50 |
-| + | Fountain filter 6-pack (recurring) | $4–$7 | $16 | ≈ 60% | ≈ $11 |
-| + | Paw & coat wipes, 3 × 50 | $5–$7 | $14 | ≈ 50–64% | ≈ $7 |
+Landed cost = CJ item price **+ CJ shipping to a US address**, read from the live product page
+("Total: $…", ship-to US, cheapest available method) on 2026-11-22.
 
-\* Card fee assumed at Stripe's 2.9% + $0.30. **Ad spend is not included** — budget 15–25% of revenue for
-cold traffic; the three hero SKUs still leave $18–$36 per order after that.
+| # | Product (store name) | CJ SKU | CJ item | CJ ship to US | Landed | Retail | Gross margin | After card fees* |
+|---|---|---|---|---|---|---|---|---|
+| 1 | **The Haven Bed** — Medium 20 in (50 cm) | `CJJJCWMY01390-Grey50cm` | $5.61 | $19.00 | **$24.61** | $89 | 72% | $61.51 (69%) |
+| 1 | **The Haven Bed** — Large 26 in (65 cm) | `CJJJCWMY01390-Grey 65cm` | $6.08 | $25.58 | **$31.66** | $109 | 71% | $73.88 (68%) |
+| 2 | **SteamGroom 3-in-1** — Ceramic white | `CJYD207827101AZ` | $3.86 | $10.07 | **$13.93** | $39 | 64% | $23.64 (61%) |
+| 2 | **SteamGroom 3-in-1** — Blush pink | `CJYD207827102BY` | $3.86 | ≈$8.90 † | **≈$12.70** | $39 | 67% | ≈$24.87 (64%) |
+| 3 | **Stillwater Fountain** — Circulation 2 L | `CJMY174605320TG` | $13.16 | $18.70 | **$31.86** | $79 | 60% | $44.55 (56%) |
+| 3 | **Stillwater Fountain** — Motion-sense 2 L | `CJMY174605325YB` | $16.92 | $19.64 | **$36.56** | $89 | 59% | $49.56 (56%) |
+| + | **Fountain Filter Refill** (cotton set) | `CJMY174605312LO` | $2.94 | $6.47 | **$9.41** | $16 | 41% | $5.83 (36%) |
 
-Blended AOV target: **$65–$95** (bed alone is $89; fountain + filters is $95; wipes/filters are the add-on that
-gets a $39 order over the $50 free-shipping line).
+\* Card fee assumed at Stripe/PayPal 2.9% + $0.30. **Ad spend is not included** — budget 15–25% of
+revenue for cold traffic. Blended AOV target **$85–$110** (bed alone $89; fountain + refill $95;
+a $39 comb plus filters crosses the $50 free-shipping line).
 
-### Why each one earns its place
+† Verified price/weight pairs. The Blush pink SKU is lighter (234 g vs 317 g) and its freight was
+**estimated** from the verified Ceramic white rate (317 g → $10.07); item price is verified. Treat
+pink as ≈$12.70 landed until a sample order confirms it.
 
-**1. The Haven Bed (orthopedic / calming bed)**
-- Problem: aging and large-breed dogs wake up stiff; owners already spend $200+ on vet visits, so $89 for
-  "a bed that helps her joints" is an easy yes. Highest price tolerance in the category.
-- Low return risk when sizing is right; the cover is washable, which kills the "it got dirty" refund.
-- Upsell: XL sizing (+$20–$40), replacement covers, a matching blanket. Attach rate on size upgrades is the
-  cheapest revenue in the store.
-- **Watch-outs:** dimensional weight is the margin killer — 30 × 24 × 10 in bills as ~52 lb while weighing 8 lb.
-  Demand vacuum-compressed packing; put the re-loft time ("give it 24–48 h to fully expand") on the product page
-  or you will get "it arrived flat" returns. State foam density (30D–45D is commercial standard) so the listing
-  is not just another generic bed.
+### Sourcing notes — read before changing anything
 
-**2. SteamGroom 3-in-1 (steam grooming brush)**
-- Problem: shedding season, matted undercoat, cats that panic at clippers. A fine mist lifts loose fur and dander
-  before the bristles pull, so the animal tolerates it — that is the whole ad in one clip.
-- Extremely video-friendly (steam + before/after fur), light and cheap to ship, so a $39 price with $10 off
-  is an impulse buy rather than a considered purchase.
-- Repeat angle: deshedding is seasonal but recurring; bundles with wipes or a second head lift AOV.
-- **Watch-outs:** battery/electrical items carry higher defect and support load (expect 4–8% vs ~3% for
-  non-electronic goods). Buy a sample, test ten charge cycles, and confirm the supplier ships a US-compliant
-  charger. Keep "quiet" claims modest — noise is the #1 return reason for grooming tools.
+- **CJ's US warehouse does not stock this category at these price points.** Filtering
+  `Ship from: United States` for *dog bed*, *pet bed*, *pet water fountain* and *orthopedic pet bed*
+  returned either unrelated US stock (collars, cat trees) or Amazon-style items at $44–$170 that leave
+  no margin ($96 "luxury small dog bed", $170 pet sofa). The US-warehouse pet catalog is thin.
+- So every SKU above ships **from China via CJ**: processing 1–4 days, delivery 4–9 days for the
+  electronics and 5–11 days for the bed, tracked (`CJPacket Sensitive` / `LuWei Ordinary US`).
+  That is still one supplier, one dashboard, one card — which is what the store needed — but the site
+  no longer claims US-warehouse dispatch or 3–7 day delivery.
+- **`CJGY1919307` (the old SteamGroom SKU) is dead** — a SKU search returns no product. It was replaced
+  with `CJYD207827101AZ`, the same style of misting/UVC comb (30 ml tank, 3.7 V 300 mAh, three mist
+  speeds, UVC on long press).
+- **Wipes were removed.** There was no CJ equivalent that cleared $14 retail after freight, so the
+  add-on strip now carries only the fountain filter refill.
+- Inventory is factory-held (`CJ: 0, Factory: 12 000+`) on every SKU. Nothing is pre-bought, so there
+  is no stock risk — but also no head start: a big spike in orders depends on the factory's stock.
+- Prices move. Re-check each product page before an ad push; the `landed` values in `CATALOG` are
+  documentation, not used by checkout maths.
 
-**3. Stillwater Fountain (cordless stainless fountain)**
-- Problem: cats drink too little; owners worry about dehydration and kidney issues. Moving water fixes the
-  behaviour, and "no cord to chew, no pump hum at 2 a.m." is a concrete, believable differentiator.
-- Stainless top is dishwasher-safe → hygiene story that plastic fountains can't tell.
-- **Best repeat-purchase item in the set:** filters every 4 weeks ($16), which is what turns a one-off
-  customer into a subscription-ish relationship.
-- **Watch-outs:** pumps fail when run dry (choose a model with dry-run protection), and returns on any
-  water-contact product should be written off rather than restocked. Check the box size — 12 units per carton
-  is typical and bulky.
+### What each product actually is (copy must match these)
+
+**1. The Haven Bed — plush cave bed, "crystal velvet", gentleman grey**
+- Deep rounded cave, long-pile faux fur outside, plush lining, PP cotton fill; the rim is high enough
+  for a cat or small dog to tuck its chin over.
+- Sizes 20 in (50 cm) and 26 in (65 cm) across. It is a **cat / small-to-medium dog** bed — not the
+  orthopedic memory-foam bed for large breeds the first draft of this page described.
+- Do **not** claim machine-washable covers, non-slip bases, foam density or "orthopedic support" —
+  none are in the supplier description, which lists only "1 × pet bed".
+- Watch-outs: it ships compressed and needs a day to loft; returns are dominated by size, so the size
+  guidance in the FAQ matters more than the pictures.
+
+**2. SteamGroom 3-in-1 — mist brush with UVC**
+- 30 ml water tank sprays a fine mist ahead of the needles (three speeds), UVC light on a long press,
+  head clicks out for cleaning, DC 5 V/1 A charging (~150 min), 3.7 V 300 mAh battery.
+- Packing list is **the comb only** — no cable, no charger, no oil. Say "USB charging" only if you
+  confirm a cable is included; the listing does not.
+- Watch-outs: battery items run 4–8% defect rates; buy a sample and test ten charge cycles before ads.
+  Keep "quiet" claims modest.
+
+**3. Stillwater Fountain — 2 L stainless fountain**
+- 304 stainless top, clear 2 L tank, ultra-quiet pump, US plug adapter; ships with one filter element
+  and two cotton pads. Motion-sense version adds the proximity sensor.
+- **Corded, not cordless.** No battery, no 4,000 mAh, no dry-run protection claim — those were in the
+  old copy and are gone.
+- Repeat purchase: the cotton filter set (`CJMY174605312LO`), sold as the add-on.
 
 ---
 
 ## 2. Where to source
 
-| Platform | Use it for | Notes |
+| Supplier | Use it for | Notes |
 |---|---|---|
-| **CJdropshipping** | SteamGroom (CJ SPU `CJGY1919307`, ~$7.51–$18.35 depending on variant), small electronics, QC add-on ($0.30/item) | US warehouse stock, 3–7 day delivery; custom packaging from ~$1.20/carton |
-| **Spocket / Zendrop** | Premium US/EU suppliers for the bed and fountain, 2–5 day delivery | Higher unit cost, better retail packaging and fewer defects — worth it for the $89 bed |
-| **Petfairs (US warehouse)** | Orthopedic bed reference price: **$26.51/pc, MOQ 1**, free US shipping, 3–7 day delivery | Good benchmark for negotiating other bed suppliers |
-| **Yiwu Pet Factory** | 74 oz wireless motion-sensor fountain, **$19.34/pc dropship**, 1-piece MOQ | Also 3.2 L stainless at $43.26 for a premium tier |
-| **AliExpress US warehouse** | Fastest, cheapest test of new colourways | 7–12 day delivery is the fallback, not the default — it costs conversion |
+| **CJdropshipping** (`CJ6093490`) | **Everything on the store** | One account, one saved card (`mastercard 2526`), tracked shipping, 1–4 day processing. Product pages show live inventory and freight to the US. |
+| CJ US warehouse | — | Checked and rejected for these categories (see above). Worth re-checking quarterly — US stock would cut 5–7 days off delivery. |
 
-Rule of thumb: test on CJ/AliExpress at low volume, then move the winners to a US-warehouse supplier or a
-small bulk buy (50–100 units) once you have 50+ sales/month and know your real size mix.
+Rule of thumb: keep the range at three hero SKUs plus one refill. Add a product only when it is a CJ
+SKU whose landed cost is ≤ 45% of the planned retail price.
 
 ---
 
-## 3. Launch checklist
+## 3. Operating the store
 
-1. **Reviews** — done for launch: no sample reviews or star counts are shown. Add real, verified
-   reviews to the `#reviews` section as orders ship.
-2. **Payment path** — connected: PayPal Cart Upload (`chaeminleeandrew@gmail.com`). Confirm that account
-   can receive business payments (a Personal account cannot), then place one small live test order.
-   - Alternative: Stripe **Payment Links** / PayPal Smart Buttons, or Shopify + a dropshipping app.
-   - PayPal Cart Upload is already wired in the drawer's "Checkout with PayPal" button.
-3. **Set fulfilment** — connect the supplier account, confirm US-warehouse stock, and order one sample of each
-   SKU to your own address before spending on ads.
-4. **Legal & tax** — real shipping/returns policy pages, state sales-tax registration (or Shopify Tax),
-   business entity, and only claims you can substantiate ("vet-approved" needs an actual vet). The OEKO-TEX
-   reference has been removed; the copy now says 304 stainless steel and washable, pet-safe fabrics.
-5. **Publish** — GitHub Pages serves the live store:
+1. **Order watch** — a scheduled action polls `chaeminleeandrew@gmail.com` for PayPal order mail every
+   15 minutes; a real order triggers a fulfilment hand-off.
+2. **Fulfilling an order** — PayPal order → cart lines carry the CJ SKU in `item_number` → create the
+   order in CJ (`Orders → Store Orders`, or paste the SKU into the cart) → pay with the saved card →
+   the tracking number goes back to the customer's PayPal email.
+3. **Payment path** — PayPal Cart Upload to `chaeminleeandrew@gmail.com`. Confirm the account can
+   receive business payments (a Personal account cannot) with one small live order.
+4. **Reviews** — none shown until real orders ship; publish only verified purchases (FTC).
+5. **Legal & tax** — real shipping/returns pages, state sales-tax registration, a business entity, and
+   only claims that can be substantiated. Delivery estimates on the page (1–4 days dispatch, 4–9 days
+   in transit) must stay in line with what CJ actually does.
+6. **Publish** — GitHub Pages serves `gh-pages` from `chaeminleeandrew-blip/Hearthpaws`:
    ```
-   git init && git add . && git commit -m "HearthPaws storefront"
-   gh repo create hearthpaws --public --source=. --push
-   gh api -X POST repos/:owner/hearthpaws/pages -f 'source[branch]=main' -f 'source[path]=/'
+   git add -A && git commit -m "…"
+   git push origin main && git push origin main:gh-pages
    ```
-   Then point a custom domain at it (`CNAME`). Move to Shopify/Vercel/Netlify when you take real payments.
-6. **Measure** — add analytics (GA4 or Plausible) and a Meta/TikTok pixel before the first ad. Track
+   Push to **both** branches; `gh-pages` is what the live URL serves.
+7. **Measure** — add analytics (GA4 or Plausible) and a Meta/TikTok pixel before the first ad. Track
    add-to-cart rate (target 8–12%) and checkout start (target 40%+ of carts).
 
 ---
@@ -115,13 +135,19 @@ small bulk buy (50–100 units) once you have 50+ sales/month and know your real
 
 Everything lives in `index.html`.
 
-- **Prices / variants / product names:** the `CATALOG` object at the top of the `<script>` block.
-  Card price markup is static HTML — update both, or drive the cards from `CATALOG` if you add SKUs.
+- **Prices / variants / names / SKUs:** the `CATALOG` object at the top of the `<script>` block. Card
+  price markup is static HTML — update both when a price changes.
 - **Free-shipping threshold:** `var FREE_SHIP = 50;`
-- **Cart storage key:** `hearthpaws-cart-v1` (bump it when the SKU list changes).
+- **Handling fee under $50:** `var SHIP_FEE = 4.95;`
+- **Cart storage key:** `hearthpaws-cart-v2` (bump it whenever the SKU list changes, so stale carts
+  holding retired items are dropped).
+- **Images:** `assets/haven-bed.jpg`, `assets/steamgroom.jpg`, `assets/fountain-life.jpg`
+  (cards) and `assets/fountain-product.jpg` (cart thumb). Replace them with a square photo of the
+  exact SKU you ship.
 - **Colours / type:** CSS custom properties in `:root`.
-- **Illustrations:** inline `<svg>` blocks inside each `.card-media`, plus the hero SVG and the small
-  `THUMBS` map used for cart line items.
+- **Illustrations:** the hero SVG and the filters cart thumbnail are still inline SVG.
 
-Tested in Chromium at 390 px, 768 px and 1440 px: no console errors, no horizontal overflow, cart maths
-correct across variants, quantities, removal, empty state and reload persistence.
+Tested in Chromium at 390 px, 768 px and 1440 px: no console errors, no horizontal overflow, cart
+maths correct across variants, quantities, removal, empty state and reload persistence.
+
+Live: <https://chaeminleeandrew-blip.github.io/Hearthpaws/>
